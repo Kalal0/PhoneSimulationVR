@@ -1,0 +1,28 @@
+0 hidden joints: ()
+
+Object hierarchy:
+
+LIMB [vg_world|2147483647] has no parent and 3 children
+ Joint: [vg_world|2147483647] FIXED, pivot [0, 0, 0]
+
+	LIMB [iphoneoptimized|82136] has parent [vg_world|2147483647]-FIXED and 1 child
+	 Joint: [iphoneoptimized|82136] FIXED, pivot [0, 0, 0]
+
+		LIMB [outsidebody|81884] has parent [iphoneoptimized|82136]-FIXED [vg_world|2147483647]-FIXED and 2 children
+		 Joint: [outsidebody|81884] FIXED, pivot [0, 0, 0]
+
+			LIMB [phonebodyscrew|81620] has parent [outsidebody|81884]-FIXED [iphoneoptimized|82136]-FIXED [vg_world|2147483647]-FIXED and 0 children
+			 Joint: [phonebodyscrew|81620] HINGE, pivot [-0.0119925, 0.00612742, -0.362206], axis [-0, -1.78814e-07, 1], limit [-6.28319, 0], screw_rate 0.001, dofs 0.000
+
+			LIMB [phonebodyscrew|81766] has parent [outsidebody|81884]-FIXED [iphoneoptimized|82136]-FIXED [vg_world|2147483647]-FIXED and 0 children
+			 Joint: [phonebodyscrew|81766] HINGE, pivot [0.000405312, 0.00612742, -0.362206], axis [-0, -1.78814e-07, 1], limit [-6.28319, 0], screw_rate 0.001, dofs 0.000
+
+	LIMB [hairblower|81772] has parent [vg_world|2147483647]-FIXED and 1 child
+	 Joint: [hairblower|81772] FIXED, pivot [0, 0, 0]
+
+		LIMB [hairdryer|81944] has parent [hairblower|81772]-FIXED [vg_world|2147483647]-FIXED and 0 children
+		 Joint: [hairdryer|81944] FLOATING, pivot [-0, 0, 0]
+
+	LIMB [screwdriver|81902] has parent [vg_world|2147483647]-FIXED and 0 children
+	 Joint: [screwdriver|81902] FLOATING, pivot [1.31609e-05, -3.24845e-06, -0.367202]
+

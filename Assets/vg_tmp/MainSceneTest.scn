@@ -1,0 +1,376 @@
+units_in_meters: 1
+sensor_setup {
+  sensor_origin_position {
+  }
+  sensor_origin_rotation {
+    w: 1
+  }
+}
+control_setup {
+  gesture_duration: 0.1
+  form_push_gesture: true
+  mode_interpolation_duration {
+    grasp: 0.05
+    hold: 0.1
+    release: 0.1
+    empty: 0.1
+  }
+  grasp_selection_pos_thresh: 1
+  grasp_selection_rot_thresh: 0.5
+  grasp_selection_pos_weight: 0.5
+  grasp_selection_rot_weight: 0.5
+}
+avatar {
+  scale: 1
+  instance_id: 81700
+}
+object {
+  joint {
+    id: 2147483647
+    name: "vg_world"
+    joint_type: fixed
+    position {
+    }
+    rotation {
+      w: 1
+    }
+  }
+}
+object {
+  joint {
+    id: 82136
+    name: "iphoneoptimized"
+    parent_id: 2147483647
+    joint_type: fixed
+    axis {
+      x: -0
+      y: 1
+    }
+    joint_center {
+    }
+    position {
+      x: -182.021698
+      y: -68.9
+      z: 39.5
+    }
+    rotation {
+      y: 0.707106769
+      z: 0.707106829
+    }
+    push_axis {
+      x: -0
+      y: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      y: 1
+    }
+  }
+  selection_weight: 1
+  affordance: ONLY_GRASPABLE
+  synthesis_method: DYNAMIC_GRASP
+}
+object {
+  joint {
+    id: 81884
+    name: "outsidebody"
+    parent_id: 82136
+    joint_type: fixed
+    axis {
+      x: -0
+      y: 1
+    }
+    joint_center {
+    }
+    position {
+      x: -182.021698
+      y: -68.9
+      z: 39.5
+    }
+    rotation {
+      y: 0.707106769
+      z: 0.707106829
+    }
+    push_axis {
+      x: -0
+      y: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      y: 1
+    }
+  }
+  selection_weight: 1
+  affordance: ONLY_GRASPABLE
+  synthesis_method: DYNAMIC_GRASP
+}
+object {
+  joint {
+    id: 81620
+    name: "phonebodyscrew"
+    hash: 1376486073
+    parent_id: 81884
+    axis {
+      x: -0
+      y: -1.78813991e-07
+      z: 1
+    }
+    joint_center {
+      x: -0.0119924545
+      y: 0.00612742221
+      z: -0.362205505
+    }
+    range_min: -6.28318548
+    position {
+      x: 31.2664337
+      y: 86.7611618
+      z: 38.2361603
+    }
+    rotation {
+      y: -8.94069672e-08
+      z: 1
+    }
+    user_specified_joint_center: true
+    discrete: -6.28318548
+    discrete: 0
+    screw_rate: 0.001
+    push_axis {
+      x: -0
+      y: -1.78813991e-07
+      z: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      y: -1.78813991e-07
+      z: 1
+    }
+  }
+  selection_weight: 1
+  interactable: true
+  affordance: ONLY_GRASPABLE
+  interaction_type: STICKY_HAND
+  synthesis_method: DYNAMIC_GRASP
+  root_shape {
+    position {
+      x: 0.000185966492
+      y: -0.000321857631
+      z: 0.0531068444
+    }
+    rotation {
+      w: 1
+    }
+    dimension {
+      x: 0.611458
+      y: 0.37967205
+      z: 0.753641069
+    }
+  }
+}
+object {
+  joint {
+    id: 81766
+    name: "phonebodyscrew"
+    hash: 1376486073
+    parent_id: 81884
+    axis {
+      x: -0
+      y: -1.78813991e-07
+      z: 1
+    }
+    joint_center {
+      x: 0.000405311584
+      y: 0.00612742221
+      z: -0.362205505
+    }
+    range_min: -6.28318548
+    position {
+      x: 27.3131409
+      y: 86.7611618
+      z: 38.2361603
+    }
+    rotation {
+      y: -8.94069672e-08
+      z: 1
+    }
+    user_specified_joint_center: true
+    discrete: -6.28318548
+    discrete: 0
+    screw_rate: 0.001
+    push_axis {
+      x: -0
+      y: -1.78813991e-07
+      z: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      y: -1.78813991e-07
+      z: 1
+    }
+  }
+  selection_weight: 1
+  interactable: true
+  affordance: ONLY_GRASPABLE
+  interaction_type: STICKY_HAND
+  synthesis_method: DYNAMIC_GRASP
+  root_shape {
+    position {
+      x: 0.000185966492
+      y: -0.000321857631
+      z: 0.0531068444
+    }
+    rotation {
+      w: 1
+    }
+    dimension {
+      x: 0.611458
+      y: 0.37967205
+      z: 0.753641069
+    }
+  }
+}
+object {
+  joint {
+    id: 81772
+    name: "hairblower"
+    parent_id: 2147483647
+    joint_type: fixed
+    axis {
+      x: -0
+      y: 1
+    }
+    joint_center {
+    }
+    position {
+      x: 76.4
+      y: 87.72
+      z: 28.9
+    }
+    rotation {
+      y: 0.707106769
+      w: 0.707106829
+    }
+    push_axis {
+      x: -0
+      y: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      y: 1
+    }
+  }
+  selection_weight: 1
+  affordance: ONLY_GRASPABLE
+  synthesis_method: DYNAMIC_GRASP
+}
+object {
+  joint {
+    id: 81944
+    name: "hairdryer"
+    hash: 4055028242
+    parent_id: 81772
+    joint_type: floating
+    axis {
+      x: -0
+      z: 1
+    }
+    joint_center {
+      x: -0
+    }
+    position {
+      x: 76.4
+      y: 87.72
+      z: 28.9
+    }
+    rotation {
+      x: -2.66925433e-08
+      y: 0.707106769
+      z: 2.66925433e-08
+      w: 0.707106829
+    }
+    user_specified_joint_center: true
+    push_axis {
+      x: -0
+      z: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      z: 1
+    }
+  }
+  selection_weight: 1
+  interactable: true
+  affordance: ONLY_GRASPABLE
+  interaction_type: STICKY_HAND
+  synthesis_method: DYNAMIC_GRASP
+  root_shape {
+    position {
+    }
+    rotation {
+      w: 1
+    }
+    dimension {
+    }
+  }
+}
+object {
+  joint {
+    id: 81902
+    name: "screwdriver"
+    hash: 2439091988
+    parent_id: 2147483647
+    joint_type: floating
+    motion_type: -2147483648
+    axis {
+      x: -0
+      y: 1
+    }
+    joint_center {
+      x: 1.3160894e-05
+      y: -3.24845314e-06
+      z: -0.367201805
+    }
+    position {
+      x: -29.2945557
+      y: 86.1813
+      z: 28.400713
+    }
+    rotation {
+      x: 0.0109231425
+      y: 0.0100558251
+      z: -0.587943077
+      w: 0.808766
+    }
+    push_axis {
+      x: -0
+      y: 1
+    }
+    grasp_constraint_axis {
+      x: -0
+      y: 1
+    }
+  }
+  selection_weight: 1
+  interactable: true
+  affordance: ONLY_GRASPABLE
+  interaction_type: STICKY_HAND
+  synthesis_method: DYNAMIC_GRASP
+  root_shape {
+    position {
+      x: 1.3160894e-05
+      y: -3.24845314e-06
+      z: -0.367201805
+    }
+    rotation {
+      x: -3.42621606e-05
+      y: 0.707107663
+      z: -0.707105875
+      w: 3.25746114e-05
+    }
+    dimension {
+      x: 1.84722018
+      y: 14.7090864
+      z: 1.64375973
+    }
+  }
+  physical: true
+}
