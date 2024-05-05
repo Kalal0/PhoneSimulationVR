@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.Hands
 {
@@ -33,10 +35,10 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.Hands
                 if (currentTransform != null)
                 {
                     var position = currentTransform.position;
-                    
+
                     if (m_ObjectRoot != null)
                         position = m_ObjectRoot.InverseTransformPoint(currentTransform.position);
-                    
+
                     m_OriginalPositions.Add(new Pose(position, currentTransform.rotation));
                 }
                 else
@@ -80,9 +82,19 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.Hands
                     {
                         rigidBody.velocity = Vector3.zero;
                         rigidBody.angularVelocity = Vector3.zero;
+                        rigidBody.isKinematic = true; // Set Rigidbody to kinematic
+
+                        // Start a coroutine to revert kinematic state after 0.1 seconds
+                        StartCoroutine(RevertKinematicState(rigidBody));
                     }
                 }
             }
+        }
+
+        IEnumerator RevertKinematicState(Rigidbody rb)
+        {
+            yield return new WaitForSeconds(0.1f); // Wait for 0.1 seconds
+            rb.isKinematic = false; // Revert Rigidbody to its original state
         }
     }
 }
